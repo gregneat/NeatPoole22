@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Methodology and More Information about installing Java on Mac</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Methodology and More Information about installing Java on Mac</h1>
+</header>
+<style>
+  p {
+    font-size: 16px !important;
+  }
+</style>
+<hr />
+<h2 id="why-you-should-care">Why you should care</h2>
+<p>While you <em>could</em> just sit back and let the script do a bunch of the heavy lifting, doing it yourself can be a very valuable experience. This way of installing java uses the terminal, which is an extremely important aspect of computer science. The more you get to know it, the better. Figuring it out can also help you get better at figuring other things out, which is an incredibly valuable skill to have when it comes to computers.</p>
+<p><img src="https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png" alt="relevant xkcd" width="700px"/></p>
+<h3 id="what-the-script-does">What the script does</h3>
+<p>You can open the script up for yourself to see what it does, but it essentially runs a series of six commands. This will go through what each of these does and why I chose to do it in this way.</p>
+<h3 id="if-youre-planning-on-doing-this-yourself">If you’re planning on doing this yourself</h3>
+<p>Open up the Terminal. You can either doing this by opening up the finder, clicking ‘Applications’, and double clicking ‘Terminal’; or, you can open spotlight search(the little magnifying glass in the top right) by clicking it or hitting command+space, then by searching for terminal and hitting enter.</p>
+<p>Enter these commands in succession, hitting enter after copying and pasting the command into the prompt. There should be some output related to the input so you know it worked.</p>
+<h4 id="install-xcode-tools">1. Install XCode tools</h4>
+<p><code>xcode-select --install</code></p>
+<p>This command installs Xcode tools, which are tools that the terminal uses to use the commands following this one. Xcode is apple’s IDE for developing apple-centric software, but with the installation of XCode they install a bunch of command line utilities. This command bypasses the need to install the whole app and just installs the command line utilities.</p>
+<h4 id="install-homebrew">2. Install Homebrew</h4>
+<p><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<p>The script checks if Homebrew is already installed, and if not, runs the command above. If it is, Homebrew is just updated.</p>
+<p>Homebrew is a package manager for Mac that makes it <strong>incredibly</strong> easy to download and install additional stuff that apple didn’t already install. In this case, that ‘stuff’ is Java. This is probably the most valuable thing I have ever downloaded on my Mac, it’s really great.</p>
+<h4 id="install-brew-cask">3. Install brew cask</h4>
+<p><code>brew tap caskroom/cask</code></p>
+<p>This command extends Homebrew slightly, allowing for it to install applications( like .dmg files, for instance ).</p>
+<h4 id="install-java">4. Install Java</h4>
+<p><code>brew cask install java</code></p>
+<p>This is what will finally install java. This will likely prompt you for a password.</p>
+<h4 id="check-java-is-installed">5. Check Java is installed</h4>
+<p><code>java -version</code></p>
+<p>This checks the version of java; a good trick you can do to see if something is installed is to check its version. It wouldn’t have a version if it wasn’t installed!</p>
+<p>Now you have Xcode tools, Homebrew, and importantly, Java. Hooray.</p>
+<hr />
+<h2 id="alternative-download-from-oracle">Alternative: Download from oracle</h2>
+<p>I chose to use homebrew as the method of installation because it was easier, doesn’t rely on any installer wizards, and oracle can be unreliable and confusing sometimes. However, you can always just download java from <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html">here</a> and use the installer they provide. See <a href="https://java.com/en/download/help/mac_install.xml">here</a> for their official instructions for Mac.</p>
+</body>
+</html>
