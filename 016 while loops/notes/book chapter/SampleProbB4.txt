@@ -1,0 +1,25 @@
+number = 2;                // initialize 
+while (number <= 20)       // loop boundary condition
+{
+   System.out.println(number);
+   number += 2;            //  increment by 2
+}
+
+
+number = 1;                // initialize 
+while (number <= 10)       // loop boundary condition
+{
+   System.out.println(number*2);
+   number++   ;            //  increment
+}
+
+
+number = 1;                // initialize 
+while (number <= 20)       // loop boundary condition
+{
+   if (0 == number%2)      // check for even
+   {
+      System.out.println(number);
+   }
+   number++   ;            //  increment
+}

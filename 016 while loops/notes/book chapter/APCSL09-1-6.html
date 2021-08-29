@@ -1,0 +1,213 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lesson 9 - while Loops</title><style type="text/css">
+    <!--
+      body                 { color: #000000; background-color: #ffffff; } 
+      A                    { font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+      A:visited            { color: #551a8b; }
+      A:hover              { color: #0066CC;	text-decoration: underline; }
+      dt                   { font-weight: bold; } 
+      input                { font-family: Courier New, Courier, monospace; font-size: 100% }
+      code                 { font-family: Courier New, Courier, monospace; font-size: 120% }
+      titleCode            { font-family: Courier, monospace; font-size: +4; }
+      ol.alpha             { list-style-type: lower-alpha; }
+      span.center          { text-align: center; }
+      span.right           { text-align: right; }
+      span.constant        { color: #990099; }
+      span.keyword         { color: #993333; }
+      span.function-name   { color: #666633; }
+      span.comment         { color: #666666; }
+      span.string          { color: #0000ff; }
+      span.variable-name   { color: #000066; }
+      span.type            { color: #006600; }
+      span.spacer          { font-size: 1pt; }
+      -->
+    </style></head><body bgcolor="ffffff"><script language="javascript">
+    <!-- var emailAbstract="Lesson 9 - while Loops";
+    var justTitle="Lesson 9 - while Loops";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 9 - while Loops"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><a href="#navskip"><img border="0" alt="Skip to main content" src="../i/c.gif"></a><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#ffffff"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="3" bgcolor="#cc6633"><IMG alt="" height="3" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#333333"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img alt="" height="40" width="1" src="../i/c.gif"><font size="+1" face="Arial Bold"><b>Lesson 9 - while Loops</b></font><br></td><td width="*" valign="bottom" align="right"><a border="0" href="APCSL09.zip"><img alt="ZIP" border="0" src="../i/icon-zip.gif"></a><a border="0" href="APCSL09-ltr.pdf"><img alt="PDF (letter)" border="0" src="../i/icon-pdf-ltr.gif"></a></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#000000" colspan="5"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="topmain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL09-1-5.html"><img alt="Previous" border="0" src="../i/previous.gif" name="topprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL09-1-7.html"><img alt="Next" border="0" src="../i/next.gif" name="topnext"></a></TD></TR></TABLE><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="100" width="100%"><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, Helvetica"><b>Conditional Loop Strategies</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, Helvetica"><nobr>    page 6 of 9</nobr></font></td></tr></table><br><font size="2" face="Verdana, Arial, Helvetica"><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+    <li><p>This section will present a variety of strategies that assist the novice programmer in developing correct <code><b>while</b></code> loops.  The problem to be solved is described first.
+      </p>
+      <blockquote><p>Problem statement:</p>
+        <p>A program will read integer test scores from the keyboard until a negative value is typed in.  The program will drop the lowest score from the total and print the average of the remaining scores.
+        </p>
+      </blockquote>
+    </li>
+    <li><p>One strategy to utilize in the construction of a <code><b>while</b></code> loop is to think about the following four sections of the loop:  initialization, loop boundary, contents of loop, and the state of variables after the loop.
+      </p>
+      <ol class="alpha" style="alpha">
+        <li><p>Initialization - Variables will usually need to be initialized before you get into the loop.  This is especially true of <code><b>while</b></code> loops that have the boundary condition at the top of the control structure.
+          </p>
+        </li>
+        <li><p>Loop boundary - You must construct a Boolean expression that becomes false when the problem is done.  This is the most common source of error in coding a while loop.  Be careful of off-by-one errors that cause the loop to happen one too few or one too many times.
+          </p>
+        </li>
+        <li><p>Contents of loop - This is where the problem is solved.  The statement of the loop must also provide the opportunity to reach the loop boundary.  If there is no movement toward the loop boundary you will get stuck in an endless loop.
+          </p>
+        </li>
+        <li><p>State of variables after loop - To ensure the correctness of your loop you must determine on paper the status of key variables used in your loop.  This involves tracing of code, which is demanding but necessary.
+          </p>
+        </li>
+      </ol>
+      <br>
+    </li>
+    <li><p>We now solve the problem by first developing pseudocode.
+      </p>
+      <blockquote><pre><code>Pseudocode:
+
+initialize total and count to 0
+initialize smallest to INT_MAX
+get first score
+while score is not a negative value
+  increment total
+  increment count
+  change smallest if necessary
+  get next score
+subtract smallest from total
+calculate average</code></pre></blockquote>
+    </li>
+    <li><p>And now the code:
+      </p>
+      <blockquote><pre><code><b>public static void</b> main (String[] args)
+{
+  ConsoleIO console = <b>new</b> ConsoleIO();
+  <b>int</b>  total=0;
+  <b>int</b>  smallest = INT_MAX;
+  <b>int</b>  score;
+  <b>int</b>  count = 0;
+  <b>double</b>  avg;
+
+  System.out.print("Enter a score (-1 to quit) ---&gt; ");
+  score = console.getlnInt();
+
+  <b>while</b> (score &gt;= 0)	// loop boundary
+  {
+    total += score;
+    count++;
+
+    <b>if</b> (score &lt; smallest)
+      smallest = score;       // maintain state of smallest
+
+    System.out.print("Enter a score (-1 to quit) --&gt; ");
+    score = console.getInt(); // allows us to approach boundary
+  }
+
+  <b>if</b> (count &gt; 1)
+  {
+    total -= smallest;
+    avg = double (total)/(count-1);
+    System.out.println( "Average = " + avg);
+  }
+  <b>else</b>
+    System.out.println("Insufficient data to average");
+}</code></pre></blockquote>
+    </li>
+    <li><p>Tracing code is best done in a chart or table format.  It keeps your data organized instead of marking values all over the page.  We now trace the following sample data input:
+      </p>
+      <blockquote><pre><code>65   23   81   17   45   -1</code></pre></blockquote>
+    <table border="0"><tr><td align="center" width="120pt"><font size="-1"><code><i>score</i></code></font></td><td align="center" width="120pt"><font size="-1"><code><i>score &gt;= 0</i></code></font></td><td align="center" width="120pt"><font size="-1"><code><i>total</i></code></font></td><td align="center" width="120pt"><font size="-1"><code><i>count</i></code></font></td><td align="center" width="120pt"><font size="-1"><code><i>smallest</i></code></font></td></tr><tr><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td></tr></table>
+    <table border="1"><tr><td align="center" width="120pt"><font size="-1">undefined</font></td><td align="center" width="120pt"><font size="-1">undefined</font></td><td align="center" width="120pt"><font size="-1">0</font></td><td align="center" width="120pt"><font size="-1">0</font></td><td align="center" width="120pt"><font size="-1">INT_MAX</font></td></tr><tr><td align="center" width="120pt"><font size="-1">65</font></td><td align="center" width="120pt"><font size="-1"><code><b>true</b></code></font></td><td align="center" width="120pt"><font size="-1">65</font></td><td align="center" width="120pt"><font size="-1">1</font></td><td align="center" width="120pt"><font size="-1">65</font></td></tr><tr><td align="center" width="120pt"><font size="-1">23</font></td><td align="center" width="120pt"><font size="-1"><code><b>true</b></code></font></td><td align="center" width="120pt"><font size="-1">88</font></td><td align="center" width="120pt"><font size="-1">2</font></td><td align="center" width="120pt"><font size="-1">23</font></td></tr><tr><td align="center" width="120pt"><font size="-1">81</font></td><td align="center" width="120pt"><font size="-1"><code><b>true</b></code></font></td><td align="center" width="120pt"><font size="-1">169</font></td><td align="center" width="120pt"><font size="-1">3</font></td><td align="center" width="120pt"><font size="-1">23</font></td></tr><tr><td align="center" width="120pt"><font size="-1">17</font></td><td align="center" width="120pt"><font size="-1"><code><b>true</b></code></font></td><td align="center" width="120pt"><font size="-1">186</font></td><td align="center" width="120pt"><font size="-1">4</font></td><td align="center" width="120pt"><font size="-1">17</font></td></tr><tr><td align="center" width="120pt"><font size="-1">45</font></td><td align="center" width="120pt"><font size="-1"><code><b>true</b></code></font></td><td align="center" width="120pt"><font size="-1">231</font></td><td align="center" width="120pt"><font size="-1">5</font></td><td align="center" width="120pt"><font size="-1">17</font></td></tr><tr><td align="center" width="120pt"><font size="-1">-1</font></td><td align="center" width="120pt"><font size="-1"><code><b>false</b></code></font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td><td align="center" width="120pt"><font size="-1">&nbsp;</font></td></tr></table>
+    <br>
+    <p>When the loop is terminated the three key variables (<code><i>total</i></code>, <code><i>score</i></code>, and <code><i>smallest</i></code>) contain the correct answers.
+    </p>
+    </li>
+    <li><p>Another development tool used by programmers is the concept of a state variable.  The term state refers to the condition or value of a variable.  The variable <code><i>smallest</i></code> maintains state information for us, that of the smallest value read so far.  There are three aspects to consider about state variables:
+      </p>
+      <ol class="alpha" style="alpha">
+        <li>A state variable must be initialized.
+        </li>
+        <li>The state will be changed as appropriate.
+        </li>
+        <li>The state must be maintained as appropriate.
+        </li>
+      </ol>
+      <br>
+      <p>In the chart above, <code><i>smallest</i></code> was initialized to the highest possible integer.  As data was read, <code><i>smallest</i></code> was changed only if a newer smaller value was encountered.  If a larger value was read, the state variable did not change.
+      </p>
+    </li>
+    <li><p>When analyzing the correctness of state variables you should consider three things.
+      </p>
+      <blockquote>Is the state initialized?<br>
+Will the state find the correct answer?<br>
+Will the state maintain the correct answer?</blockquote>
+      <p>As first-time programmers, students will often initialize and find the state, but their code will lose the state information as the loop continues on.  Learn to recognize when you are using a state variable and focus on these three parts:  initialize, find, and maintain state.
+      </p>
+    </li>
+    <li><p>Later on in the year we will add the strategy of developing loop boundaries using DeMorgan's law from Boolean algebra.  This advanced topic will be covered in Lesson 18.
+      </p>
+    </li>
+  </ol><br></font></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="bottommain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL09-1-5.html"><img alt="Previous" border="0" src="../i/previous.gif" name="bottomprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL09-1-7.html"><img alt="Next" border="0" src="../i/next.gif" name="bottomnext"></a></TD></TR><TR><TD width="150" height="1" bgcolor="#000000" colspan="6"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD width="62"><TABLE cellpadding="0" cellspacing="0" border="0" width="62"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" width="60" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org"><font face="Arial, Verdana" size="2">Contact</font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD width="100%"><TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TR height="21" bgcolor="#006699"><TD><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD><TABLE cellpadding="0" cellspacing="0" border="0"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org/javalicense.pdf"><font face="Arial Narrow" size="1"><nobr>&nbsp;&copy;ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD></TR></TABLE></body></html>
