@@ -1,0 +1,28 @@
+Applied Computer Programming
+Mr. Neat
+
+Word_In
+
+This will be the first assignment in a series that will lead to a word processor.  The purpose of this assignment is to read text from a file and write it to the screen.
+
+To start this assignment, open a file with Notepad called text.txt.  Write a paragraph in this file on your favorite movie.  Save this file in your working Turbo C++ directory.
+
+Next write a complete C++ program that opens the text.txt file, reads the contents of the file into RAM and writes the contents to the screen.  Also have your program write out to the screen how many total characters were read.
+
+An example output is given below.
+
+Contents of the text.txt:
+text.txt
+My favorite movie is "Top Gun".
+
+
+
+
+
+The output after running your program with this file is:
+
+Myfavoritemovieis"Top Gun".
+
+The file contains 26 characters.
+
+  
