@@ -1,0 +1,2 @@
+javac temp.java 
+pause
