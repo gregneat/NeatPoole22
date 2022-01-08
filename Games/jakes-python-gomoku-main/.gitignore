@@ -1,0 +1,6 @@
+graphics.pdf
+__pycache__/
+.DS_Store
+modules/__pycache__/
+test.py
+temp.txt
