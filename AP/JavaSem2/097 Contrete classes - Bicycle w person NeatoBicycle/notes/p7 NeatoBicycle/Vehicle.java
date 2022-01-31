@@ -1,5 +1,5 @@
-// import pkg.*;
-package pkg;
+import pkg.*;
+// package pkg;
 public abstract class Vehicle{
 	public abstract void draw();
 	public abstract void fill();
