@@ -1,5 +1,4 @@
-import pkg.*;
-import java.util.ArrayList;
+package pkg;
 
 
 
