@@ -1,0 +1,245 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lesson 20 - ArrayList</title><style type="text/css">
+    <!--
+      body                 { color: #000000; background-color: #ffffff; } 
+      A                    { font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+      A:visited            { color: #551a8b; }
+      A:hover              { color: #0066CC;	text-decoration: underline; }
+      dt                   { font-weight: bold; } 
+      input                { font-family: Courier New, Courier, monospace; font-size: 100% }
+      code                 { font-family: Courier New, Courier, monospace; font-size: 120% }
+      titleCode            { font-family: Courier, monospace; font-size: +4; }
+      ol.alpha             { list-style-type: lower-alpha; }
+      span.center          { text-align: center; }
+      span.right           { text-align: right; }
+      span.constant        { color: #990099; }
+      span.keyword         { color: #993333; }
+      span.function-name   { color: #666633; }
+      span.comment         { color: #666666; }
+      span.string          { color: #0000ff; }
+      span.variable-name   { color: #000066; }
+      span.type            { color: #006600; }
+      span.spacer          { font-size: 1pt; }
+      -->
+    </style></head><body bgcolor="ffffff"><script language="javascript">
+    <!-- var emailAbstract="Lesson 20 - ArrayList";
+    var justTitle="Lesson 20 - ArrayList";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 20 - ArrayList"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><a href="#navskip"><img border="0" alt="Skip to main content" src="../i/c.gif"></a><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#ffffff"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="3" bgcolor="#cc6633"><IMG alt="" height="3" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#333333"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img alt="" height="40" width="1" src="../i/c.gif"><font size="+1" face="Arial Bold"><b>Lesson 20 - ArrayList</b></font><br></td><td width="*" valign="bottom" align="right"></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#000000" colspan="5"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="topmain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL20-1-9.html"><img alt="Previous" border="0" src="../i/previous.gif" name="topprevious"></a></TD><TD background="../i/sw-gold.gif"><img border="0" src="../i/xnext.gif"></TD></TR></TABLE><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="100" width="100%"><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, Helvetica"><b>L.A.7.3 - <i xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">Rectangle Methods</i></b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, Helvetica"><nobr>    page 10 of 10</nobr></font></td></tr></table><br><font size="2" face="Verdana, Arial, Helvetica"><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"><font size="+1"><b>Background:</b></font></p><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+      <li><p>In this lab exercise, you will continue your work on the <code>Rectangle</code> class created in <i>L.A.6.2 - Rectangle</i> by adding additional attributes and behaviors. These enhancements will include the ability to construct a Rectangle from and existing one, get and set the x coordinate, y coordinate, width and height parameter, set the orientation in which the rectangle will be drawn, and display textual information on the drawing surface.
+        </p>
+      </li>
+      <li><p>The specifications of a class that models a rectangular shape would be:
+        </p>
+        <p><u>Variables</u>
+        </p>
+        <blockquote><pre><code><b>private double</b> myX;      // the x coordinate of the rectangle
+<b>private double</b> myY;      // the y coordinate of the rectangle
+<b>private double</b> myWidth;  // the width of the rectangle
+<b>private double</b> myHeight; // the height of the rectangle
+
+// saves the direction the pen is pointing
+// (0 = horizontal, pointing right)
+<b>private double</b> myDirection;
+
+// Creates a 500 x 500 SketchPad with a DrawingTool, pen, that is used
+// to display Rectangle objects. The Drawingtool is declared static
+// so that multiple Rectangle objects can be drawn on the Sketchpad
+// at the same time.
+<b>private static</b> DrawingTool pen = <b>new</b> DrawingTool(<b>new</b> SketchPad(500, 500));</code></pre></blockquote>
+        <p><u>Constructors</u>
+        </p>
+        <blockquote><pre><code>// Creates a default instance of a Rectangle object with all dimensions
+//   set to zero.
+Rectangle()
+
+// Creates a new instance of a Rectangle object with the left and right
+// edges of the rectangle at x and x + width. The top and bottom edges
+// are at y and y + height.
+Rectangle(<b>double</b> x, <b>double</b> y, <b>double</b> width, <b>double</b> height)
+
+// Creates a new instance of a Rectangle object that is a copy of an
+// existing Rectangle object.
+Rectangle(Rectangle rect)</code></pre></blockquote>
+        <p><u>Methods</u>
+        </p>
+        <blockquote><pre><code>// Sets the x coordinate of this Rectangle
+<b>public void</b> setXPos(<b>double</b> x)
+
+// Sets the y coordinate of this Rectangle
+<b>public void</b> setYPos(<b>double</b> Y)
+
+// Sets the width this Rectangle
+<b>public void</b> setWidth(<b>double</b> width)
+
+// Sets the height of this Rectangle
+<b>public void</b> setHeight(<b>double</b> height)
+
+// Sets the direction the DrawingTool is pointing
+// 0 = horizontal to the right
+<b>public void</b> setDirection(<b>double</b> direction)
+
+// Returns the x coordinate of this Rectangle
+<b>public double</b> getXPos()
+
+// Returns the y coordinate of this Rectangle
+<b>public double</b> getYPos()
+
+// Returns the width of this Rectangle
+<b>public double</b> getWidth()
+
+// Returns the height of this Rectangle
+<b>public double</b> getHeight()
+
+// Returns the direction the DrawingTool is pointing
+// 0 = horizontal to the right
+<b>public double</b> getDirection()
+
+// calculates and returns the perimeter of the rectangle
+<b>public double</b> getPerimeter()
+
+// Calculates and returns the area of the rectangle.
+<b>public double</b> getArea()
+
+// Draws String str at the specified x and y coordinates
+<b>public void</b> drawString(String str, <b>double</b> x, <b>double</b> y)
+
+// Draws a new instance of a Rectangle object with the left and right
+// edges of the rectangle at x and x + width. The top and bottom edges
+// are at y and y + height.
+<b>public void</b> draw()</code></pre></blockquote>
+      </li>
+    </ol><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"></p><p xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"><font size="+1"><b>Assignment:</b></font></p><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+      <li><p>Implement a Rectangle class with the following properties.
+        </p>
+        <ol type="a">
+          <li><p>A default <code>Rectangle</code> object is specified in the constructor with the <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code> set to 0.
+            </p>
+          </li>
+          <li><p>A <code>Rectangle</code> object is specified in the constructor with the left and right edges of the rectangle at <code>x</code> and <code>x + width</code>. The top and bottom edges are at <code>y</code> and <code>y + height</code>.
+            </p>
+          </li>
+          <li><p>A <code>Rectangle</code> object is specified that is a copy of an existing <code>Rectangle</code>.
+            </p>
+          </li>
+          <li><p>Methods <code>getXPos</code>, <code>getYPos</code>, <code>getWidth</code>, and <code>getHeight</code>, return the <code>x</code>, <code>y</code>, <code>height</code> and <code>width</code> of the <code>Rectangle</code> respectively.
+            </p>
+          </li>
+          <li><p>A method, <code>getDirection</code>, returns the current orientation of the <code>DrawingTool</code>.
+            </p>
+          </li>
+          <li><p>Methods <code>setXPos</code>, <code>setYPos</code>, <code>setWidth</code>, and <code>setHeight</code>, sets the <code>x</code>, <code>y</code>, <code>height</code> and <code>width</code> of the <code>Rectangle</code> respectively to the value of each methods <code><b>double</b></code> parameter.
+            </p>
+          </li>
+          <li><p>A method <code>setDirection</code>, sets the current orientation of the <code>DrawingTool</code>.
+            </p>
+          </li>
+          <li><p>A method <code>getPerimeter</code> calculates and returns the perimeter of the <code>Rectangle</code>.
+            </p>
+          </li>
+          <li><p>A method <code>getArea</code> calculates and returns the area of the <code>Rectangle</code>.
+            </p>
+          </li>
+          <li><p>A method <code>draw</code> displays a new instance of a <code>Rectangle</code> object.
+            </p>
+          </li>
+          <li><p>A method <code>drawString</code> displays String at the specified x and y coordinates of the drawing area.
+            </p>
+          </li>
+        </ol>
+        <p></p>
+      </li>
+      <li><p>The methods <code>draw</code>, <code>drawString</code>, and <code>setDirection</code> make use of existing <code>DrawingTool</code> methods. Refer to handout, <a target="_blank" href="HA1_1DrawingTool.html">H.A.1.1 - DrawingTool</a>, for details on the <code>DrawingTool</code> methods.
+        </p>
+      </li>
+      <li><p>Write a testing class with a main method that constructs a <code>Rectangle</code>, <code>rectA</code>, and calls <code>setDirection</code>, <code>setWidth</code>, and <code>draw</code> for each <code>Rectangle</code> created. It is recommended that the changes in orientation and width of each successive rectangle in the spiral be calculated using the <code>getDirection</code> and <code>getWidth</code> methods. For example, if the increment for each turn is given by <code>turnInc</code> and the decrease in size of rectangle is given by <code>widthDec</code>, then successive calls to the following:
+        </p>
+        <blockquote><pre><code>rectA.setDirection(rectA.getDirection() - turnInc);
+rectA.setWidth(rectA.getWidth() - widthDec);
+rectA.draw();</code></pre></blockquote>
+        <p>would draw each "spoke" of the rectangular spiral:
+        </p>
+        <p>Construct another <code>Rectangle</code>, <code>rectB</code>, that is a copy of the orginal <code>rectA</code>. Draw the rectangle in the upper left corner of drawing area. Label the rectangle with its width, height, perimeter and area.
+        </p>
+        <p>The resulting image would be similar to the one shown below:
+        </p>
+        <p align="center"><img src="images/la7_3img01.jpg"></p>
+      </li>
+      <li><p>Turn in the source code with the run output attached. It is recommended that the <code>Rectangle</code> class and the testing class be combined in one source file (<code>RectangleMethods.java</code>).
+        </p>
+      </li>
+    </ol><br></font></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="bottommain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL20-1-9.html"><img alt="Previous" border="0" src="../i/previous.gif" name="bottomprevious"></a></TD><TD background="../i/sw-gold.gif"><img border="0" src="../i/xnext.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000" colspan="6"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD width="62"><TABLE cellpadding="0" cellspacing="0" border="0" width="62"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" width="60" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org"><font face="Arial, Verdana" size="2">Contact</font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD width="100%"><TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TR height="21" bgcolor="#006699"><TD><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD><TABLE cellpadding="0" cellspacing="0" border="0"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org/javalicense.pdf"><font face="Arial Narrow" size="1"><nobr>&nbsp;&copy;ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD></TR></TABLE></body></html>

@@ -1,0 +1,252 @@
+<html">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<title>H.A.20.1 - ArrayList</title>
+<style>
+<!--
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.h1, li.h1, div.h1
+	{mso-style-name:h1;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.lab, li.lab, div.lab
+	{mso-style-name:lab;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 94.0pt 1.5in;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.Lab0, li.Lab0, div.Lab0
+	{mso-style-name:Lab;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:13.0pt 27.0pt 40.0pt .75in 67.0pt 81.0pt 94.0pt 1.5in;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=Lab0 align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><font size=4 color=black face=Arial><span style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+font-weight:bold'>ArrayList Methods<o:p></o:p></span></font></b></p>
+
+<p class=lab><font size=2 color=black face="Times New Roman"><span
+style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab><font size=2 color=black face="Times New Roman"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab><font size=2 color=black face="Times New Roman"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><b><font size=2 color=black
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New";font-weight:bold'>int</span></font></b><font size=2
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New"'> size();<span style="mso-spacerun:
+yes">                    </span>// Returns the number of elements<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// currently
+stored in the list<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><b><font size=2 color=black
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New";font-weight:bold'>boolean</span></font></b><font
+size=2 face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New"'> isEmpty();<span style="mso-spacerun:
+yes">             </span>// Returns true if the list is empty,<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// otherwise
+returns false<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><b><font size=2 color=black
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New";font-weight:bold'>boolean</span></font></b><font
+size=2 face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New"'> add(Object obj);<span style="mso-spacerun:
+yes">       </span>// Appends obj at the end of the list;<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// returns true<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><b><font size=2 color=black
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New";font-weight:bold'>void</span></font></b><font size=2
+face="Courier New"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:"Courier New"'> add(<b><span style='font-weight:bold'>int</span></b>
+i, Object obj);<span style="mso-spacerun: yes">   </span>// Inserts obj before
+the i-th element;<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// increments the
+indices of the<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// subsequent
+elements by 1<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>Object
+set(<b><span style='font-weight:bold'>int</span></b> i, Object obj); //
+Replaces the i-th element with obj;<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// returns the
+old value<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>Object
+get(<b><span style='font-weight:bold'>int</span></b> i);<span
+style="mso-spacerun: yes">             </span>// Returns the value of the i-th<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// element<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>Object
+remove(<b><span style='font-weight:bold'>int</span></b> i);<span
+style="mso-spacerun: yes">          </span>// Removes the i-th element from the<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// list and
+returns its old value;<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                               </span>// decrements
+the indices of the<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">                              </span>// subsequent elements by 1<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black face="Courier New"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab><font size=2 color=black face="Times New Roman"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+<p class=lab><font size=2 color=black face="Times New Roman"><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'>Note: this is an incomplete
+list: see <a
+href="http://java.sun.com/j2se/1.4.1/docs/api/java/util/ArrayList.html">http://java.sun.com/j2se/1.4.1/docs/api/java/util/ArrayList.html</a>
+for the entire list.<o:p></o:p></span></font></p>
+
+<p class=lab style='tab-stops:.5in'><font size=2 color=black
+face="Times New Roman"><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
