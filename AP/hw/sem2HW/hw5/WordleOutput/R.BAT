@@ -1,0 +1,2 @@
+java -cp ; psvm
+pause
