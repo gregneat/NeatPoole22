@@ -1,0 +1,160 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lesson 23 - Quadratic Sorting Algorithms</title><style type="text/css">
+    <!--
+      body                 { color: #000000; background-color: #ffffff; } 
+      A                    { font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+      A:visited            { color: #551a8b; }
+      A:hover              { color: #0066CC;	text-decoration: underline; }
+      dt                   { font-weight: bold; } 
+      input                { font-family: Courier New, Courier, monospace; font-size: 100% }
+      code                 { font-family: Courier New, Courier, monospace; font-size: 120% }
+      titleCode            { font-family: Courier, monospace; font-size: +4; }
+      ol.alpha             { list-style-type: lower-alpha; }
+      span.center          { text-align: center; }
+      span.right           { text-align: right; }
+      span.constant        { color: #990099; }
+      span.keyword         { color: #993333; }
+      span.function-name   { color: #666633; }
+      span.comment         { color: #666666; }
+      span.string          { color: #0000ff; }
+      span.variable-name   { color: #000066; }
+      span.type            { color: #006600; }
+      span.spacer          { font-size: 1pt; }
+      -->
+    </style></head><body bgcolor="ffffff"><script language="javascript">
+    <!-- var emailAbstract="Lesson 23 - Quadratic Sorting Algorithms";
+    var justTitle="Lesson 23 - Quadratic Sorting Algorithms";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 23 - Quadratic Sorting Algorithms"; 
+    var menu2blurb="Feedback"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    var menu2over=new Image(108,68); 
+    var menu2out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    menu2over.src="imagemaster/himenu2.jpg"; 
+    menu2out.src="imagemaster/menu2.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><a href="#navskip"><img border="0" alt="Skip to main content" src="../i/c.gif"></a><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#ffffff"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="3" bgcolor="#cc6633"><IMG alt="" height="3" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#333333"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img alt="" height="40" width="1" src="../i/c.gif"><font size="+1" face="Arial Bold"><b>Lesson 23 - Quadratic Sorting Algorithms</b></font><br></td><td width="*" valign="bottom" align="right"></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#000000" colspan="5"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="topmain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL23-1-6.html"><img alt="Previous" border="0" src="../i/previous.gif" name="topprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL23-1-8.html"><img alt="Next" border="0" src="../i/next.gif" name="topnext"></a></TD></TR></TABLE><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="100" width="100%"><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, Helvetica"><b>Counting Steps - Quadratic Algorithms</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, Helvetica"><nobr>    page 7 of 10</nobr></font></td></tr></table><br><font size="2" face="Verdana, Arial, Helvetica"><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+      <li><p>These three sorting algorithms are categorized as quadratic sorts because the number of steps increases as a quadratic function of the size of the list.
+        </p>
+      </li>
+      <li><p>It will be very helpful to study algorithms based on the number of steps they require to solve a problem.  We will add code to the sorting template program and count the number of steps for each algorithm.
+        </p>
+      </li>
+      <li><p>This will require the use of an instance variable - we'll call it <code>steps</code>.  The <code>steps</code> variable will be maintained within the sorting class and be accessed through appropriate accessor and modifier methods.  You will need to initialize <code>steps</code> to 0 at the appropriate spot in the main menu method.
+        </p>
+      </li>
+      <li><p>As you type in the sorting algorithms, add increment statements for the variable <code>steps</code>. For example here are the revised version of the <code>bubbleSort</code> method:
+        </p>
+        <blockquote>
+        <pre><code><b>void bubbleSort</b> (<b>int</b>[] list)
+{
+  steps++;     // initialization of outer
+  <b>for</b> (<b>int</b> outer = 0; outer &lt; list.length - 1; outer++)
+  {
+    steps += 3;
+    //  1 - boundary check of outer loop;
+    //  2 - increment, outer++
+    //  3 - initialization of inner loop
+    <b>for</b> (<b>int</b> inner = 0; inner &lt; list.length - outer - 1; inner++)
+    {
+      steps += 3;
+      //  1 - boundary check of inner loop
+      //  2 - increment, inner++
+      //  3 - if comparison
+      <b>if</b> (list[inner] &gt; list[inner+1])
+      {
+        <b>int</b> temp = list[inner]
+        list[inner] = list[inner + 1]);
+        list[inner + 1] = temp;
+        steps += 3;    // swap of list[inner] &amp; list[inner + 1]
+      }
+    }
+  }
+}
+</code></pre>
+        </blockquote>
+      </li>
+      <li><p>It is helpful to remember that a <code><b>for</b></code> statement is simply a compressed <code><b>while</b></code> statement.  Each <code><b>for</b></code> loop has three parts:  initialization, boundary check, and incrementation.
+        </p>
+      </li>
+      <li><p>As you count the number of steps, an interesting result will show up in your data.  As the size of the data set doubles, the number of steps executed increases by approximately four times, a "quadratic" rate.  
+        </p>
+      </li>
+      <li><p>Bubble sort is an example of a quadratic algorithm in which the number of steps required increases at a quadratic rate as the size of the data set increases.
+        </p>
+      </li>
+      <li><p>A quadratic equation in algebra is one with a squared term, like x<sup>2</sup>.  In our sorting example, as the size of the array increases by a factor of N, the number of steps required for any of the quadratic sorts increases by a factor of N<sup>2</sup>.
+        </p>
+      </li>
+    </ol><br></font></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="bottommain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL23-1-6.html"><img alt="Previous" border="0" src="../i/previous.gif" name="bottomprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL23-1-8.html"><img alt="Next" border="0" src="../i/next.gif" name="bottomnext"></a></TD></TR><TR><TD width="150" height="1" bgcolor="#000000" colspan="6"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD width="62"><TABLE cellpadding="0" cellspacing="0" border="0" width="62"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" width="60" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org"><font face="Arial, Verdana" size="2">Contact</font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD width="100%"><TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TR height="21" bgcolor="#006699"><TD><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD><TABLE cellpadding="0" cellspacing="0" border="0"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org/javalicense.pdf"><font face="Arial Narrow" size="1"><nobr>&nbsp;&copy;ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD></TR></TABLE></body></html>

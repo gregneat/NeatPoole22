@@ -1,0 +1,12 @@
+double power(int base, int n)
+//  Recursively determines base raised to the nth power.
+//  Assume 0 <= n <= 10.
+{
+   if (n == 0)
+      return 1;
+   else if (n == 1)
+      return base;
+   else
+      return  base * power(base, n-1);
+}
+

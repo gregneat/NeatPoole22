@@ -1,0 +1,264 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lesson 23 - Quadratic Sorting Algorithms</title><style type="text/css">
+    <!--
+      body                 { color: #000000; background-color: #ffffff; } 
+      A                    { font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+      A:visited            { color: #551a8b; }
+      A:hover              { color: #0066CC;	text-decoration: underline; }
+      dt                   { font-weight: bold; } 
+      input                { font-family: Courier New, Courier, monospace; font-size: 100% }
+      code                 { font-family: Courier New, Courier, monospace; font-size: 120% }
+      titleCode            { font-family: Courier, monospace; font-size: +4; }
+      ol.alpha             { list-style-type: lower-alpha; }
+      span.center          { text-align: center; }
+      span.right           { text-align: right; }
+      span.constant        { color: #990099; }
+      span.keyword         { color: #993333; }
+      span.function-name   { color: #666633; }
+      span.comment         { color: #666666; }
+      span.string          { color: #0000ff; }
+      span.variable-name   { color: #000066; }
+      span.type            { color: #006600; }
+      span.spacer          { font-size: 1pt; }
+      -->
+    </style></head><body bgcolor="ffffff"><script language="javascript">
+    <!-- var emailAbstract="Lesson 23 - Quadratic Sorting Algorithms";
+    var justTitle="Lesson 23 - Quadratic Sorting Algorithms";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 23 - Quadratic Sorting Algorithms"; 
+    var menu2blurb="Feedback"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    var menu2over=new Image(108,68); 
+    var menu2out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    menu2over.src="imagemaster/himenu2.jpg"; 
+    menu2out.src="imagemaster/menu2.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><a href="#navskip"><img border="0" alt="Skip to main content" src="../i/c.gif"></a><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#ffffff"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="3" bgcolor="#cc6633"><IMG alt="" height="3" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#333333"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img alt="" height="40" width="1" src="../i/c.gif"><font size="+1" face="Arial Bold"><b>Lesson 23 - Quadratic Sorting Algorithms</b></font><br></td><td width="*" valign="bottom" align="right"></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#000000" colspan="5"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="topmain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL23-1-3.html"><img alt="Previous" border="0" src="../i/previous.gif" name="topprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL23-1-5.html"><img alt="Next" border="0" src="../i/next.gif" name="topnext"></a></TD></TR></TABLE><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="100" width="100%"><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, Helvetica"><b>Bubble Sort</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, Helvetica"><nobr>    page 4 of 10</nobr></font></td></tr></table><br><font size="2" face="Verdana, Arial, Helvetica"><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+      <li><p>Bubble Sort is the simplest algorithm for sorting a set of data, and also the slowest.  The procedure goes like this:
+        </p>
+        <ol class="alpha" style="alpha">
+          <li>Find the largest item and place it at the end of the items that were searched.  
+          </li>
+          <li>Remove the largest item most recently found from the set to be searched and go to step a.
+          </li>
+          <li>(Repeat parts a. and b. until the number of items to be searched is zero.)
+          </li>
+        </ol>
+        <br>
+        <p>The Bubble Sort algorithm uses the simplest method for determining the largest item in a list: it compares two items at a time and then moves on to compare the larger of the two with the next item in the list.  After each comparison, the larger item must be identified and "swapped" into position to be compared with the next item.  
+        </p>
+      </li>
+      <li><p>The following program implements the Bubble Sort algorithm.
+        </p>
+        <blockquote><pre><code><b>public static void</b> bubbleSort(<b>int</b>[] list)
+{
+  <b>for</b> (<b>int</b> outer = 0; outer &lt; list.length - 1; outer++)
+  {
+    <b>for</b> (<b>int</b> inner = 0; inner &lt; list.length-outer-1; inner++)
+    {
+      <b>if</b> (list[inner] &gt; list[inner + 1])
+      {
+        //swap list[inner] &amp; list[inner+1]
+        <b>int</b> temp = list[inner];
+        list[inner] = list[inner + 1];
+        list[inner + 1] = temp;
+      }
+    }
+  }
+}
+</code></pre>
+        </blockquote>
+      </li>
+      <li>
+        <p>Given an array of 6 values, the loop variables <code>outer</code> and <code>inner</code> will evaluate as follows:
+        </p>
+        <table border="0"><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1">When <code>outer =</code></font></td><td align="center" width="250pt"><font size="-1">inner ranges from</font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"> </font></td><td align="center" width="250pt"><font size="-1"><code>0</code> to <code>&lt; (6 - outer - 1)</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td width="200pt"><font size="-1"> </font></td><td width="250pt"><font size="-1"> </font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>0</code></font></td><td align="center" width="250pt"><font size="-1"><code>0 to 4</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>1</code></font></td><td align="center" width="250pt"><font size="-1"><code>0 to 3</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>2</code></font></td><td align="center" width="250pt"><font size="-1"><code>0 to 2</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>3</code></font></td><td align="center" width="250pt"><font size="-1"><code>0 to 1</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>4</code></font></td><td align="center" width="250pt"><font size="-1"><code>0 to 0</code></font></td></tr></table>
+        <br>
+      </li>
+      <li>
+        <p>When <code>outer = 0</code>, then the inner loop will do 5 comparisons of values next to each other.  As <code>inner</code> ranges from 0&ndash;4, it does the following comparisons:
+        </p>
+        <table border="0"><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code><u>inner</u></code></font></td><td align="center" width="425pt"><font size="-1"><code><u><b>if</b> list[inner] &gt; list[inner + 1]</u></code></font></td></tr><tr><td width="25pt"><font size="-1">&nbsp;</font></td><td width="200pt"><font size="-1">&nbsp;</font></td><td width="425pt"><font size="-1">&nbsp;</font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>0</code></font></td><td align="center" width="425pt"><font size="-1"><code><b>if</b> list[0] &gt; list[1]</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>1</code></font></td><td align="center" width="425pt"><font size="-1"><code><b>if</b> list[1] &gt; list[2]</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>...</code></font></td><td align="center" width="425pt"><font size="-1"><code>...</code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="200pt"><font size="-1"><code>4</code></font></td><td align="center" width="425pt"><font size="-1"><code><b>if</b> list[4] &gt; list[5]</code></font></td></tr></table>
+        <br>
+      </li>
+      <li><p>If (<code>list[inner] &gt; list[inner+1]</code>) is <code><b>true</b></code>, then the values are out of order and a swap takes place. The swap takes three lines of code and uses a temporary variable <code>temp</code>.
+        </p>
+      </li>
+      <li><p>After the first pass (<code>outer = 0</code>), the largest value will be in its final resting place.  When <nobr><code>outer = 1</code></nobr>, the <code>inner</code> loop only goes from 0 to 3 because a comparison between positions 4 and 5 is unnecessary.  The <code>inner</code> loop is shrinking.
+        </p>
+      </li>
+      <li><p>Because of the presence of duplicate values this algorithm will result in a list sorted in nondecreasing order.
+        </p>
+      </li>
+      <li><p>Here is a small list of data to test your understanding of Bubble Sort.  Write in the correct sequence of integers after each advance of <code>outer</code>.
+        </p>
+        <table border="0"><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code><i>outer</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>57</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>95</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>88</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>14</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>25</i></code></font></td><td align="center" width="90pt"><font size="-1"><code><i>6</i></code></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td><td width="90pt"><font size="-1"> </font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code>0</code></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  57  '">
+              </form></font>
+            </td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  88  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  14  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  25  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='   6  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  95  '">
+              </form></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code>1</code></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  57  '">
+              </form></font>
+            </td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  14  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  25  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='   6  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  88  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  95  '">
+              </form></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code>2</code></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  14  '">
+              </form></font>
+            </td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  25  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='   6  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  57  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  88  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  95  '">
+              </form></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code>3</code></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  14  '">
+              </form></font>
+            </td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='   6  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  25  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  57  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  88  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  95  '">
+              </form></font></td></tr><tr><td width="25pt"><font size="-1"> </font></td><td align="center" width="90pt"><font size="-1"><code>4</code></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='   6  '">
+              </form></font>
+            </td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  14  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  25  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  57  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  88  '">
+              </form></font></td><td align="center" width="90pt"><font size="-1">
+              <form>
+                <input type="button" value="______" name="button1" onclick="button1.value='  95  '">
+              </form></font></td></tr></table>
+        <br>
+      </li>
+    </ol><br></font></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="bottommain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL23-1-3.html"><img alt="Previous" border="0" src="../i/previous.gif" name="bottomprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL23-1-5.html"><img alt="Next" border="0" src="../i/next.gif" name="bottomnext"></a></TD></TR><TR><TD width="150" height="1" bgcolor="#000000" colspan="6"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD width="62"><TABLE cellpadding="0" cellspacing="0" border="0" width="62"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" width="60" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org"><font face="Arial, Verdana" size="2">Contact</font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD width="100%"><TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TR height="21" bgcolor="#006699"><TD><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD><TABLE cellpadding="0" cellspacing="0" border="0"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org/javalicense.pdf"><font face="Arial Narrow" size="1"><nobr>&nbsp;&copy;ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD></TR></TABLE></body></html>

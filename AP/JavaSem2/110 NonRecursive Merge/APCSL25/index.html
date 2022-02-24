@@ -1,0 +1,313 @@
+<html>
+
+                <!-- This panel generated from the developerWorks XML tag set for tutorials, Version 2.0.0.  (C) Copyright 2000, 2001 IBM Corporation.  All rights reserved. -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Section index: Lesson 25 - Merge and Mergesort</title>
+<style type="text/css">
+    <!--
+      body         { color: #000000; background-color: #ffffff }
+a            { font-family: Verdana, Arial, Helvetica; text-decoration: none }
+a:visited    { color: #551a8b }
+a:hover      { color: #0066CC; text-decoration: underline }
+dt           { font-weight: bold }
+input        { font-family: 'Courier New', Courier, monospace; font-size: 100% }
+code         { font-family: 'Courier New', Courier, monospace; font-size: 120% }
+titlecode    { font-family: Courier, monospace; font-size: +4 }
+ol.alpha     { list-style-type: lower-alpha }
+span.center  { text-align: center }
+span.right   { text-align: right }
+span.constant { color: #990099 }
+span.keyword { color: #993333 }
+span.function-name { color: #666633 }
+span.comment { color: #666666 }
+span.string  { color: #0000ff }
+span.variable-name { color: #000066 }
+span.type    { color: #006600 }
+span.spacer  { font-size: 1pt }
+-->
+    </style>
+</head>
+
+<body bgcolor="ffffff">
+
+<script language="javascript">
+    <!-- var emailAbstract="Lesson 25 - Merge and Mergesort";
+    var justTitle="Lesson 25 - Merge and Mergesort";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 25 - Merge and Mergesort"; 
+    var menu2blurb="Feedback"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    var menu2over=new Image(108,68); 
+    var menu2out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    menu2over.src="imagemaster/himenu2.jpg"; 
+    menu2out.src="imagemaster/menu2.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+                <!--
+                function RollOver(i)
+                {
+                    var NN = document.layers
+                    if (!NN)
+                        document.all("i" + i).style.color = "#0066cc"
+                }
+                function RollOut(i)
+                {
+                    var NN = document.layers
+                    if (!NN)
+                      document.all("i" + i).style.color = "black"
+                }
+                //-->
+                </SCRIPT>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="150" height="1" bgcolor="#ffffff"><img alt height="1"
+            width="150" src="../i/c.gif"></td>
+    </tr>
+    <tr>
+        <td width="150" height="3" bgcolor="#cc6633"><img alt height="3"
+            width="150" src="../i/c.gif"></td>
+    </tr>
+    <tr>
+        <td width="150" height="1" bgcolor="#333333"><img alt height="1"
+            width="150" src="../i/c.gif"></td>
+    </tr>
+    <tr>
+        <td width="150" height="1" bgcolor="#000000"><img alt height="1"
+            width="150" src="../i/c.gif"></td>
+    </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td><img alt height="40" width="1" src="../i/c.gif"><font size="+1"
+            face="Arial Bold"><b>Lesson 25 - Merge and Mergesort</b></font><br>
+        </td>
+        <td width="*" valign="bottom" align="right"><a border="0"
+            href="APCSL25.zip"><img alt="ZIP" border="0" src="../i/icon-zip.gif"
+            width="38" height="26"></a><a border="0" href="APCSL25-ltr.pdf"><img
+            alt="PDF (letter)" border="0" src="../i/icon-pdf-ltr.gif" width="75"
+            height="26"></a></td>
+    </tr>
+    <tr>
+        <td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td>
+    </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="150" height="1" bgcolor="#000000" colspan="5"><img alt
+            height="1" width="150" src="../i/c.gif"></td>
+    </tr>
+    <tr>
+        <td background="../i/sw-gold.gif"><img border="0" src="../i/xmain.gif"
+            width="77" height="15"></td>
+        <td background="../i/sw-gold.gif"><a border="0"></a>&nbsp;</td>
+        <td width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"
+            width="1" height="1"></td>
+        <td background="../i/sw-gold.gif"><img border="0"
+            src="../i/xprevious.gif" width="77" height="15"></td>
+        <td background="../i/sw-gold.gif"><a border="0"
+            onmouseover="iOver('topnext'); self.status=nextblurb; return true;"
+            onmouseout="iOut('topnext'); self.status=''; return true;"
+            href="APCSL25-1-1.html"><img alt="Next" border="0"
+            src="../i/next.gif" name="topnext" width="60" height="15"></a></td>
+    </tr>
+</table>
+<table bgcolor="ffffff" valign="top" cellspacing="0" cellpadding="0" border="0"
+height="308" width="100%">
+    <tr>
+        <a name="navskip"></a>
+        <td bgcolor="ffffff" width="15">&nbsp;</td>
+        <td bgcolor="#ffffff" align="center" valign="top" cellspacing="0"
+        height="305" cellpadding="0" width="55"><br>
+            <p align="center">
+            <applet code="SortItem.class" width="100" height="100">
+                <param name="alg" value="ExtraStorageMergeSort">
+            </applet>
+            <font face="Arial" size="1">Recursive&nbsp;MergeSort</font></p>
+            <p align="center">
+            <applet code="SortItem.class" width="100" height="100">
+                <param name="alg" value="InsertionSort">
+            </applet>
+            <font face="Arial" size="1">Insertion&nbsp;Sort</font></p>
+            <p align="center">
+            <applet code="SortItem.class" width="100" height="100">
+                <param name="alg" value="SelectionSort">
+            </applet>
+            <font face="Arial" size="1">Selection&nbsp;Sort</font></p>
+            <p><font face="Arial" size="1">(click&nbsp;image&nbsp;to&nbsp;sort)</font></p>
+            <br>
+        </td>
+        <td bgcolor="ffffff" width="12">&nbsp;</td>
+        <td align="left" cellspacing="2" cellpadding="2" valign="top"
+        bgcolor="ffffff" width="486"><br>
+            <font size="3" face="Arial Bold"><b>Select any of these links to 
+            start the lesson.</b></font><br>
+            <br>
+            <font size="2" face="Verdana, Arial, Helvetica"><img
+            src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-1.html" class="lmitem" id="i1"
+            onmouseover="RollOver(1)" onmouseout="RollOut(1)">1. Introduction</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-2.html" class="lmitem" id="i2"
+            onmouseover="RollOver(2)" onmouseout="RollOut(2)">2. Vocabulary</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-3.html" class="lmitem" id="i3"
+            onmouseover="RollOver(3)" onmouseout="RollOut(3)">3. A Non-Recursive 
+            Mergesort</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-4.html" class="lmitem" id="i4"
+            onmouseover="RollOver(4)" onmouseout="RollOut(4)">4. A Merge 
+            Algorithm</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-5.html" class="lmitem" id="i5"
+            onmouseover="RollOver(5)" onmouseout="RollOut(5)">5. Recursive 
+            Mergesort</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-6.html" class="lmitem" id="i6"
+            onmouseover="RollOver(6)" onmouseout="RollOut(6)">6. Order of 
+            Recursive Mergesort</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-7.html" class="lmitem" id="i7"
+            onmouseover="RollOver(7)" onmouseout="RollOut(7)">7. Summary/Review</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-8.html" class="lmitem" id="i8"
+            onmouseover="RollOver(8)" onmouseout="RollOut(8)">8. L.A.25.1 - 
+            Merge</a><br>
+            <img src="../i/arrow.gif" border="0" width="15" height="14">&nbsp; <a
+            href="APCSL25-1-9.html" class="lmitem" id="i9"
+            onmouseover="RollOver(9)" onmouseout="RollOut(9)">9. L.A.25.2 - 
+            Mergesort (Resursive)</a><br>
+            </font></td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td width="62">
+            <table cellpadding="0" cellspacing="0" border="0" width="62">
+                <tr bgcolor="#006699">
+                    <td width="1" bgcolor="#959595"><img alt border="0"
+                        height="20" width="1" src="../i/c.gif"></td>
+                    <td align="center" width="60" class="mast"><a
+                        style="text-decoration: none; color: #ffffff;"
+                        class="nav" target="_blank" href="http://www.ict.org"><font
+                        face="Arial, Verdana" size="2">Contact</font></a></td>
+                    <td width="1" bgcolor="#959595"><img alt border="0"
+                        height="21" width="1" src="../i/c.gif"></td>
+                </tr>
+                <tr bgcolor="#ffffff">
+                    <td><img alt border="0" src="../i/c.gif" width="1"
+                        height="1"></td>
+                </tr>
+            </table>
+        </td>
+        <td width="100%">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr height="21" bgcolor="#006699">
+                    <td><img alt border="0" height="21" width="1"
+                        src="../i/c.gif"></td>
+                </tr>
+                <tr bgcolor="#ffffff">
+                    <td><img alt border="0" src="../i/c.gif" width="1"
+                        height="1"></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr bgcolor="#006699">
+                    <td width="1" bgcolor="#959595"><img alt border="0"
+                        height="20" width="1" src="../i/c.gif"></td>
+                    <td align="center" class="mast"><a
+                        style="text-decoration: none; color: #ffffff;"
+                        class="nav" target="_blank"
+                        href="http://www.ict.org/javalicense.pdf"><font
+                        face="Arial Narrow" size="1"><nobr>&nbsp;©ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></td>
+                    <td width="1" bgcolor="#959595"><img alt border="0"
+                        height="21" width="1" src="../i/c.gif"></td>
+                </tr>
+                <tr bgcolor="#ffffff">
+                    <td><img alt border="0" src="../i/c.gif" width="1"
+                        height="1"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+
+</html>

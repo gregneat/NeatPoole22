@@ -1,0 +1,172 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lesson 15 - Recursion</title><style type="text/css">
+    <!--
+      body                 { color: #000000; background-color: #ffffff; } 
+      A                    { font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+      A:visited            { color: #551a8b; }
+      A:hover              { color: #0066CC;	text-decoration: underline; }
+      dt                   { font-weight: bold; } 
+      input                { font-family: Courier New, Courier, monospace; font-size: 100% }
+      code                 { font-family: Courier New, Courier, monospace; font-size: 120% }
+      titleCode            { font-family: Courier, monospace; font-size: +4; }
+      ol.alpha             { list-style-type: lower-alpha; }
+      span.center          { text-align: center; }
+      span.right           { text-align: right; }
+      span.constant        { color: #990099; }
+      span.keyword         { color: #993333; }
+      span.function-name   { color: #666633; }
+      span.comment         { color: #666666; }
+      span.string          { color: #0000ff; }
+      span.variable-name   { color: #000066; }
+      span.type            { color: #006600; }
+      span.spacer          { font-size: 1pt; }
+      -->
+    </style></head><body bgcolor="ffffff"><script language="javascript">
+    <!-- var emailAbstract="Lesson 15 - Recursion";
+    var justTitle="Lesson 15 - Recursion";
+    var tutorialPrereqs="";
+    var menu1blurb="Lesson 15 - Recursion"; 
+    
+      var browser = "x";
+      if (navigator.userAgent.indexOf("Mozilla/4") != -1) browser = "N3";
+      else if (navigator.userAgent.indexOf("Mozilla/3") != -1) browser = "N3";
+      else browser = "x";
+      
+      if (browser=="N3")
+      {
+    var menu1over=new Image(108,68); 
+    var menu1out=new Image(108,68); 
+    
+        var topmainover=new Image(77,15);
+        var topmainout=new Image(77,15);
+        var bottommainover=new Image(77,15);
+        var bottommainout=new Image(77,15);
+
+        var topfeedbackover=new Image(80,15);
+        var topfeedbackout=new Image(80,15);
+        var bottomfeedbackover=new Image(80,15);
+        var bottomfeedbackout=new Image(80,15);
+        var toppreviousover=new Image(77,15);
+        var toppreviousout=new Image(77,15);
+        var bottompreviousover=new Image(77,15);
+        var bottompreviousout=new Image(77,15);
+        var topnextover=new Image(60,15);
+        var topnextout=new Image(60,15);
+        var bottomnextover=new Image(60,15);
+        var bottomnextout=new Image(60,15);
+        var topnextsectionover=new Image(108,15);
+        var topnextsectionout=new Image(108,15);
+        var bottomnextsectionover=new Image(108,15);
+        var bottomnextsectionout=new Image(108,15);
+      
+    menu1over.src="imagemaster/himenu1.jpg"; 
+    menu1out.src="imagemaster/menu1.jpg"; 
+    
+        var mainblurb="Main menu";
+        var sectionblurb="Section menu";
+        var feedbackblurb="Give feedback on this tutorial";
+        var previousblurb="Go to previous panel";
+        var nextblurb="Go to next panel";
+        var nextsectionblurb="Go to next section";
+
+        topmainover.src="../i/h-main.gif";
+        topmainout.src="../i/main.gif";
+        bottommainover.src="../i/h-main.gif";
+        bottommainout.src="../i/main.gif";
+
+        topfeedbackover.src="../i/h-feedback.gif";
+        topfeedbackout.src="../i/feedback.gif";
+        bottomfeedbackover.src="../i/h-feedback.gif";
+        bottomfeedbackout.src="../i/feedback.gif";
+        toppreviousover.src="../i/h-previous.gif";
+        toppreviousout.src="../i/previous.gif";
+        bottompreviousover.src="../i/h-previous.gif";
+        bottompreviousout.src="../i/previous.gif";
+        topnextover.src="../i/h-next.gif";
+        topnextout.src="../i/next.gif";
+        bottomnextover.src="../i/h-next.gif";
+        bottomnextout.src="../i/next.gif";
+        topnextsectionout.src="../i/nextsection.gif";
+        topnextsectionover.src="../i/h-nextsection.gif";
+        bottomnextsectionout.src="../i/nextsection.gif";
+        bottomnextsectionover.src="../i/h-nextsection.gif";
+      }
+      function iOut(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "out.src");
+      }
+      function iOver(image)
+      {
+        if (browser=="N3")document[image].src=eval(image + "over.src");
+      }
+      // -->
+    </script><a href="#navskip"><img border="0" alt="Skip to main content" src="../i/c.gif"></a><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#ffffff"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="3" bgcolor="#cc6633"><IMG alt="" height="3" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#333333"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD width="150" height="1" bgcolor="#000000"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><img alt="" height="40" width="1" src="../i/c.gif"><font size="+1" face="Arial Bold"><b>Lesson 15 - Recursion</b></font><br></td><td width="*" valign="bottom" align="right"><a border="0" href="APCSL15.zip"><img alt="ZIP" border="0" src="../i/icon-zip.gif"></a><a border="0" href="APCSL15-ltr.pdf"><img alt="PDF (letter)" border="0" src="../i/icon-pdf-ltr.gif"></a></td></tr><tr><td height="2" colspan="2"><img height="2" width="1" src="../i/c.gif"></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD width="150" height="1" bgcolor="#000000" colspan="5"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="topmain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL15-1-2.html"><img alt="Previous" border="0" src="../i/previous.gif" name="topprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL15-1-4.html"><img alt="Next" border="0" src="../i/next.gif" name="topnext"></a></TD></TR></TABLE><table bgcolor="ffffff" cellspacing="0" cellpadding="2" border="0" height="100" width="100%"><tr><td bgcolor="ffffff" width="15">&nbsp;</td><td bgcolor="ffffff" width="12">&nbsp;</td><td valign="top" align="left" bgcolor="ffffff" width="*"><br><table cellspacing="0" cellpadding="0" border="0"><tr><td width="90%"><font size="4" face="Verdana, Arial, Helvetica"><b>Recursion</b></font></td><td width="200" align="right"><font size="1" face="Verdana, Arial, Helvetica"><nobr>    page 3 of 9</nobr></font></td></tr></table><br><font size="2" face="Verdana, Arial, Helvetica"><ol xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+      <li><p>Recursion occurs when a method calls itself to solve a simpler version of the problem.  With each recursive call, the problem is different from, and simpler than, the original problem.
+        </p>
+      </li>
+      <li><p>Recursion involves the internal use of a stack.  A stack is a data abstraction which works like this:  New data is "pushed," or added to the top of the stack.  When information is removed from the stack it is "popped," or removed from the top of the stack.  The recursive calls of a function will be stored on a stack, and manipulated in a similar manner.
+        </p>
+      </li>
+      <li><p>The problem of solving factorials is our first example of recursion.  The factorial operation in mathematics is illustrated below.
+        </p>
+        <blockquote>
+        <pre><code>
+1! = 1
+2! = 2 * 1            or     2 * 1!
+3! = 3 * 2 * 1        or     3 * 2!
+4! = 4 * 3 * 2 *1     or     4 * 3!
+        </code></pre>
+        </blockquote>
+        <p>Notice that each successive line can be solved in terms of the previous line.  For example, 4! is equivalent to the problem 4 * 3!.
+        </p>
+        <p>A recursive method to solve the factorial problem is given below.  Notice in the last line of the method the recursive call.  The method calls another implementation of itself to solve a smaller version of the problem.
+          </p>
+          <blockquote>
+          <pre><code><b>int</b> fact(<b>int</b> n)
+//  returns the value of n!
+//  precondition:  n &gt;= 1
+{
+   <b>if</b> (1 == n)
+      <b>return</b> 1;
+   <b>else</b>
+      <b>return</b> n * fact(n - 1);
+}</code></pre>
+        </blockquote>
+      </li>
+      <li><p>The base case is a fundamental situation where no further problem solving is necessary.  In the case of finding factorials, the answer of 1! is by definition = 1.  No further work is needed.
+        </p>
+      </li>
+      <li><p>Suppose we call the method to solve <code>fact(4)</code>.  This will result in four calls of the method <code>fact</code>
+        </p>
+        <p><code>fact(4)</code>:  This is not the base case (<code>1 == n</code>), so we return the result of <code>4 * fact(3)</code>.  This multiplication will be solved until an answer is found for <code>fact(3)</code>.  This leads to the second call of fact to solve <code>fact(3)</code>.
+        </p>
+        <p><code>fact(3)</code>:  Again, this is not the base case and we return <code>3 * fact (2)</code>.  This leads to another recursive call to solve <code>fact(2)</code>.
+        </p>
+        <p><code>fact(2)</code>:  Still, this is not the base case, we solve <code>2 * fact(1)</code>.
+        </p>
+        <p><code>fact(1)</code>:  Finally we reach the base case which returns the value 1.
+        </p>
+      </li>
+      <li><p>When a recursive call is made, the current computation is temporarily suspended and placed on the stack with all its current information available for later use.
+        </p>
+      </li>
+      <li><p>A completely new copy of the method is used to evaluate the recursive call.  When that is completed, the value returned by the recursive call is used to complete the suspended computation.  The suspended computation is removed from the stack and its work now proceeds.
+        </p>
+      </li>
+      <li><p>When the base case is encountered the recursion will now unwind and result in a final answer.  The expressions below should be read from right to left.
+        </p>
+        <blockquote>
+        <pre><code>fact (4) = 4 * fact (3) = 3 * fact (2) = 2 * fact (1) = 1
+
+24 &lt;-- 4 * 6 &lt;-- 3 * 2 &lt;-- 2 * 1</code></pre>
+        </blockquote>
+        <p>Here is a picture.   Look at what happens:
+        </p>
+        <p align="center"><img src="images/fact.gif">
+        </p>
+        <p>Each box represent a call of function <code>fact</code>.  To solve <code>fact(4)</code> requires four calls of function <code>fact</code>.
+        </p>
+      </li>
+      <li><p>Notice that when the recursive calls were made inside the <code><b>else</b></code> statement, the value fed to the recursive call was <nobr>(<code>n-1</code>)</nobr>.  This is where the problem is getting smaller and simpler with the eventual goal of solving <code>1!</code>.
+        </p>
+      </li>
+    </ol><br></font></td></tr></table><TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topmain'); iOver('bottommain'); self.status=mainblurb; return true;" onMouseOut="iOut('topmain'); iOut('bottommain'); self.status=''; return true;" href="index.html"><img alt="Lesson Menu" border="0" src="../i/main.gif" name="bottommain"></a></TD><TD background="../i/sw-gold.gif"><a border="0"></a></TD><TD width="100%" background="../i/sw-gold.gif"><img src="../i/c.gif"></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topprevious'); iOver('bottomprevious'); self.status=previousblurb; return true;" onMouseOut="iOut('topprevious'); iOut('bottomprevious'); self.status=''; return true;" href="APCSL15-1-2.html"><img alt="Previous" border="0" src="../i/previous.gif" name="bottomprevious"></a></TD><TD background="../i/sw-gold.gif"><a border="0" onMouseOver="iOver('topnext'); iOver('bottomnext'); self.status=nextblurb; return true;" onMouseOut="iOut('topnext'); iOut('bottomnext'); self.status=''; return true;" href="APCSL15-1-4.html"><img alt="Next" border="0" src="../i/next.gif" name="bottomnext"></a></TD></TR><TR><TD width="150" height="1" bgcolor="#000000" colspan="6"><IMG alt="" height="1" width="150" src="../i/c.gif"></TD></TR></TABLE><TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD width="62"><TABLE cellpadding="0" cellspacing="0" border="0" width="62"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" width="60" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org"><font face="Arial, Verdana" size="2">Contact</font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD width="100%"><TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TR height="21" bgcolor="#006699"><TD><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD><TD><TABLE cellpadding="0" cellspacing="0" border="0"><TR bgcolor="#006699"><TD width="1" bgcolor="#959595"><img alt="" border="0" height="20" width="1" src="../i/c.gif"></TD><TD align="center" class="mast"><a style="text-decoration: none; color: #ffffff;" class="nav" target="_blank" href="http://www.ict.org/javalicense.pdf"><font face="Arial Narrow" size="1"><nobr>&nbsp;&copy;ICT&nbsp;2003,&nbsp;All&nbsp;Rights&nbsp;Reserved.</nobr></font></a></TD><TD width="1" bgcolor="#959595"><img alt="" border="0" height="21" width="1" src="../i/c.gif"></TD></TR><TR bgcolor="#ffffff"><TD><img alt="" border="0" height="1" width="1" src="../i/c.gif"></TD></TR></TABLE></TD></TR></TABLE></body></html>
