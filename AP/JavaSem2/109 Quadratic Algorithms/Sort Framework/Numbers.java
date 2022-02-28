@@ -32,5 +32,9 @@ public class Numbers{
 		{
 			// code for nonRecurMerge
 		}
+		private void merge(int[] a, int[] b, int[] c)
+		{
+			
+		}
 		
 }
