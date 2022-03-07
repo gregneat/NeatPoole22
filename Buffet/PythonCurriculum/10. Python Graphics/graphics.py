@@ -366,6 +366,16 @@ class Rectangle(_BBox):
     
     def __init__(self, p1, p2):
         _BBox.__init__(self, p1, p2)
+        
+    def contains(self,p):
+		leftBound = self.point.x;
+		rightBound = self.point.x + 15;
+		upBound = self.point.y - 21;
+		lowBound = self.point.y + 15;
+		if(p.x >= leftBound and p.x <= rightBound and p.y >= upBound and p.y <= lowBound):
+			return True;
+		else:
+			return False;
     
     def _draw(self, canvas, options):
         p1 = self.p1
@@ -378,7 +388,7 @@ class Rectangle(_BBox):
         other = Rectangle(self.p1, self.p2)
         other.config = self.config.copy()
         return other
-        
+
 class Oval(_BBox):
     
     def __init__(self, p1, p2):
