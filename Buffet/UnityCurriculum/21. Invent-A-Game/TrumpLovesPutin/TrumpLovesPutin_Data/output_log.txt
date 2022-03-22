@@ -1,0 +1,35 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics Family (ID=0x126)
+    Vendor:   Intel
+    VRAM:     430 MB
+    Driver:   8.15.10.2342
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.047 seconds
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\CP\unity\5. Unity V3\13. Invent-A-Game\TrumpLovesPutin\TrumpLovesPutin_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 4.635232 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.328386 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.516850 ms (FindLiveObjects: 0.045978 ms CreateObjectMapping: 0.055831 ms MarkObjects: 0.389998 ms  DeleteObjects: 0.023810 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1454 -> priority: 1 
