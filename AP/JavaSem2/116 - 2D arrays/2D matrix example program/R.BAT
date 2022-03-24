@@ -1,0 +1,2 @@
+java -cp ; IntArrayWorkerTester
+pause

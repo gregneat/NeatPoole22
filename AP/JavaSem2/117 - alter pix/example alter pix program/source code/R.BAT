@@ -1,0 +1,2 @@
+java PictureTester.java
+pause
