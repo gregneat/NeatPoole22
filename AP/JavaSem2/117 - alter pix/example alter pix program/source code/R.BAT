@@ -1,2 +1,2 @@
-java PictureTester.java
+java -cp ; PictureTester
 pause
