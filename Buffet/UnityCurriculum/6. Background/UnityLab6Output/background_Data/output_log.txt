@@ -6,6 +6,7 @@ Direct3D:
     Vendor:   Intel
     VRAM:     128 MB
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Platform assembly: C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.UI.dll (this message is harmless)
@@ -16,9 +17,26 @@ Platform assembly: C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. 
 Loading C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 - Completed reload, in  0.075 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+=======
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.285 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+>>>>>>> d8982c023022bbc2fe1c4c9cddaa340210b14bd6
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
+<<<<<<< HEAD
 Platform assembly: C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\gneat\Desktop\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\System.dll (this message is harmless)
+=======
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Dr. Neato\Desktop\github\NeatPoole22\Buffet\UnityCurriculum\6. Background\UnityLab6Output\background_Data\Managed\System.dll (this message is harmless)
+>>>>>>> d8982c023022bbc2fe1c4c9cddaa340210b14bd6
